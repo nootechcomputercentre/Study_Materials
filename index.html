@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nootech Computer Centre Study Material Portal">
+  <title>Study Material Portal | Nootech Computer Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement" role="status">
+    <span class="announcement-tag">IMPORTANT NOTICE</span>
+    <div class="ticker"><div class="ticker-track" id="noticeTicker">Welcome to the Nootech Study Material Portal • Study resources for registered students • New notices will appear here</div></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Nootech Study Portal home">
+      <div class="brand-logo"><img src="assets/images/nootech-logo.png" alt="Nootech logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback">N</span></div>
+      <div class="brand-copy"><strong>NOOTECH</strong><span>STUDY MATERIAL PORTAL</span></div>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#features">Features</a><a href="#notices">Notices</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">☼</button>
+      <a class="btn btn-small btn-outline" href="../index.html" target="_blank" rel="noopener">Main Website ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> DIGITAL LEARNING LIBRARY</div>
+        <h1>Learn smarter.<br><span>Move forward.</span></h1>
+        <p class="hero-lead">A dedicated digital learning space for Nootech students. Access your course notes, explore learning resources and stay connected with important academic updates.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-access>Access Study Materials <span>→</span></button>
+          <a class="btn btn-quiet" href="../index.html" target="_blank" rel="noopener">Explore Nootech ↗</a>
+        </div>
+        <div class="hero-trust"><span class="trust-icon">✓</span> Reserved for verified Nootech students</div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="visual-card main-visual-card">
+          <div class="visual-top"><span class="tiny-dot"></span><span class="tiny-dot"></span><span class="tiny-dot"></span><span class="visual-label">YOUR LEARNING SPACE</span></div>
+          <div class="book-illustration"><div class="book book-back"></div><div class="book book-front"><div class="book-mark">N</div><small>STUDY<br>MATERIAL</small></div><div class="pdf-chip">PDF <b>↗</b></div></div>
+          <div class="visual-bottom"><div><strong>Study resources</strong><span>Organised by course & topic</span></div><div class="round-arrow">↗</div></div>
+        </div>
+        <div class="floating-note"><span class="note-icon">✦</span><div><b>Keep learning</b><small>One topic at a time</small></div></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="status-strip section-wrap">
+      <div class="status-item"><span class="status-icon">◷</span><div><small>YOUR LOCAL TIME</small><strong id="liveClock">Loading time…</strong></div></div>
+      <div class="status-item"><span class="status-icon">▦</span><div><small>TODAY'S DATE</small><strong id="liveDate">Loading date…</strong></div></div>
+      <div class="status-item"><span class="status-icon status-green">●</span><div><small>PORTAL STATUS</small><strong>Online interface</strong></div></div>
+    </section>
+
+    <section class="section-wrap feature-section" id="features">
+      <div class="section-heading"><div><div class="eyebrow">BUILT FOR YOUR LEARNING</div><h2>Everything in one<br><span>study destination.</span></h2></div><p>Find your learning resources in a clean, organised and student-friendly environment.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon purple">▤</div><h3>Digital Study Notes</h3><p>Course-wise PDF learning materials organised by topic and subject.</p><span class="feature-index">01</span></article>
+        <article class="feature-card"><div class="feature-icon blue">⌕</div><h3>Easy Discovery</h3><p>Find relevant study resources through simple search and category filters.</p><span class="feature-index">02</span></article>
+        <article class="feature-card"><div class="feature-icon green">♧</div><h3>Verified Access</h3><p>A dedicated access process designed for registered Nootech students.</p><span class="feature-index">03</span></article>
+        <article class="feature-card"><div class="feature-icon orange">◷</div><h3>Academic Updates</h3><p>Stay informed with important notices and new material announcements.</p><span class="feature-index">04</span></article>
+      </div>
+    </section>
+
+    <section class="notice-section" id="notices"><div class="section-wrap notice-inner"><div><div class="eyebrow">STAY INFORMED</div><h2>Latest announcements</h2><p>Important academic updates from Nootech Computer Centre.</p></div><div class="notice-placeholder"><span class="notice-symbol">!</span><div><b>Notice board is ready</b><small>Published notices will appear here after the admin module is connected.</small></div><span class="notice-arrow">↗</span></div></div></section>
+
+    <section class="admission-section section-wrap">
+      <div class="admission-card"><div class="admission-orb"></div><div class="admission-copy"><div class="eyebrow light-eyebrow">TAKE THE NEXT STEP</div><h2>Build skills that<br>move you forward.</h2><p>Explore computer education and skill development courses at Nootech Computer Centre.</p><a class="btn btn-white" href="../index.html" target="_blank" rel="noopener">Explore New Admission <span>→</span></a></div><div class="admission-side"><div class="admission-emblem">N<span>+</span></div><small>LEARN · PRACTICE · ACHIEVE</small></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="section-wrap footer-main">
+      <div class="footer-brand"><div class="brand"><div class="brand-logo"><span class="logo-fallback">N</span></div><div class="brand-copy"><strong>NOOTECH</strong><span>COMPUTER CENTRE</span></div></div><p>Supporting digital learning through practical computer education and student-focused resources.</p></div>
+      <div class="footer-links"><b>Explore</b><a href="../index.html" target="_blank" rel="noopener">Main Website</a><a href="https://www.google.com/maps/search/?api=1&query=Nootech+Computer+Centre+Ashoknagar+Athgarh+Odisha" target="_blank" rel="noopener">Google Maps</a><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="footer-links"><b>Student access</b><a href="#" data-open-access>Access study materials</a><a href="../index.html" target="_blank" rel="noopener">New admission</a><a href="mailto:nootechcomputercentre@gmail.com">Email the centre</a></div>
+      <div class="footer-contact"><b>NOOTECH COMPUTER CENTRE</b><span>Ashoknagar, Athgarh, Cuttack, Odisha</span><a href="tel:+919853895452">+91 98538 95452</a><a href="mailto:nootechcomputercentre@gmail.com">nootechcomputercentre@gmail.com</a></div>
+    </div>
+    <div class="footer-bottom section-wrap"><span>© <span id="year"></span> Nootech Computer Centre. All rights reserved.</span><span>Designed & developed by <b>Mr. Sarbajit Senapati</b></span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="accessModal" aria-hidden="true">
+    <section class="access-modal" role="dialog" aria-modal="true" aria-labelledby="accessTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-mark">N</div><div class="eyebrow">STUDENT VERIFICATION</div><h2 id="accessTitle">Welcome back.</h2><p>Enter your centre-issued registration number to continue to the student access process.</p>
+      <form id="accessForm"><label for="registrationNo">Registration number</label><input id="registrationNo" name="registrationNo" placeholder="e.g. NTC/REG2024001" autocomplete="off" required><button class="btn btn-primary btn-full" type="submit">Continue <span>→</span></button></form>
+      <div class="modal-foot">First visit? Your registration details will be verified before portal registration.</div>
+      <div class="demo-notice">Phase 1 preview: backend verification is not connected yet.</div>
+    </section>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
