@@ -17,4 +17,20 @@
       "status": "published"
     }
   ]
+},
+
+{
+  "materialId": "MAT-0002",
+  "title": "Day-2",
+  "courseCode": "NTC-ADCA",
+  "courseName": "ADCA",
+  "batchName": "ADCA",
+  "subject": "",
+  "fileType": "application/pdf",
+  "driveFileId": "1CJqapBLCFwZyF8hEjrEL0tPl-EDIKUIB",
+  "driveUrl": "https://drive.google.com/file/d/1CJqapBLCFwZyF8hEjrEL0tPl-EDIKUIB/view",
+  "accessMode": "restricted",
+  "permissionEnforcedBy": "google-drive",
+  "status": "published"
 }
+
