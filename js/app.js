@@ -87,12 +87,12 @@
       .then(response => { if (!response.ok) throw new Error(`Catalogue request failed (${response.status})`); return response.json(); })
       .then(data => {
         const records = Array.isArray(data.materials) ? data.materials.filter(item => item.status === "published") : [];
-        if (count) count.textContent = `${records.length} published material${records.length === 1 ? "" : "s"}`;
-        if (status) status.textContent = `Updated ${data.updatedAt || "date unavailable"}`;
+        if (count) { count.className = "admin-library-count"; count.textContent = `${records.length} published material${records.length === 1 ? "" : "s"}`; }
+        if (status) { status.className = "admin-library-updated"; status.textContent = `Updated ${data.updatedAt || "date unavailable"}`; }
         adminMaterialList.replaceChildren();
         if (!records.length) { showAdminMessage("No published materials", "Add a published record to data/materials.json to display it here."); return; }
         records.forEach(item => {
-          const card = document.createElement("article"); card.className = "material-card";
+          const card = document.createElement("article"); card.className = "material-card admin-material-card";
           const top = document.createElement("div"); top.className = "material-card-top";
           const pdf = document.createElement("span"); pdf.className = "material-pdf-icon"; pdf.textContent = "PDF";
           const id = document.createElement("small"); id.textContent = item.materialId || "STUDY MATERIAL"; top.append(pdf,id);
