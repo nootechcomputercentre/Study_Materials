@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-13",
+  "materials": [
+    {
+      "materialId": "MAT-0001",
+      "title": "Day-1",
+      "courseCode": "NTC-ADCA",
+      "courseName": "ADCA",
+      "batchName": "ADCA",
+      "subject": "",
+      "fileType": "application/pdf",
+      "driveFileId": "1Lr8mQBW_Pjh5LST6LFCvavG3GXgaA2s_",
+      "driveUrl": "https://drive.google.com/file/d/1Lr8mQBW_Pjh5LST6LFCvavG3GXgaA2s_/view",
+      "accessMode": "restricted",
+      "permissionEnforcedBy": "google-drive",
+      "status": "published"
+    }
+  ]
+}
