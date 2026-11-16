@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Dashboard | Nootech Study Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+<header class="site-header dashboard-header">
+  <a class="brand" href="index.html"><div class="brand-logo"><span class="logo-fallback">N</span></div><div class="brand-copy"><strong>NOOTECH</strong><span>STUDENT LEARNING SPACE</span></div></a>
+  <div class="header-actions"><span class="admin-preview-label" id="studentStatus">VERIFYING SESSION</span><button class="btn btn-small btn-outline" id="studentLogout" type="button">Sign out</button></div>
+</header>
+<main class="student-wrap">
+  <div class="student-welcome">
+    <div><div class="eyebrow">STUDENT WORKSPACE</div><h1>Welcome, <span id="welcomeName">Student</span>.</h1><p>Your verified learning library is ready.</p></div>
+    <div class="student-avatar" id="studentInitial">S</div>
+  </div>
+  <div class="preview-banner" id="studentNotice" role="status">Checking your secure student session…</div>
+  <div class="student-summary">
+    <div class="student-profile-card">
+      <div class="profile-top"><div class="profile-avatar" id="profileInitial">S</div><div><small>VERIFIED STUDENT PROFILE</small><h2 id="profileName">Loading profile…</h2><span id="profileRegistration">—</span></div></div>
+      <div class="profile-details">
+        <div><small>ENROLLED COURSE</small><b id="profileCourse">—</b></div>
+        <div><small>BATCH</small><b id="profileBatch">—</b></div>
+        <div><small>ACADEMIC YEAR</small><b id="profileYear">—</b></div>
+      </div>
+    </div>
+    <div class="student-stat"><span class="stat-icon purple">▤</span><small>AVAILABLE MATERIALS</small><strong id="availableCount">—</strong><span>For your enrolled course and batch</span></div>
+    <div class="student-stat"><span class="stat-icon green">✦</span><small>ACCOUNT STATUS</small><strong id="accountStatus">—</strong><span>Verified against centre records</span></div>
+  </div>
+  <div class="library-heading"><div><div class="eyebrow">YOUR COURSE LIBRARY</div><h2>Study materials</h2><p>Only published materials matching your course and batch are shown.</p></div><input class="library-search" id="materialSearch" placeholder="Search materials…" aria-label="Search materials"></div>
+  <div class="library-filters"><label>Course <select id="courseFilter"><option value="">My course</option></select></label><label>Batch <select id="batchFilter"><option value="">My batch</option></select></label></div>
+  <div class="library-result-line"><span id="materialCount">Waiting for verification…</span><span id="catalogueStatus" role="status"></span></div>
+  <div class="material-grid" id="materialList" aria-live="polite"><div class="material-empty"><div class="empty-icon">▤</div><h3>Verifying student access</h3><p>Your study materials will load after your session is validated.</p></div></div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
