@@ -154,7 +154,9 @@
       const visible = materials.filter(item => {
         const text = [item.title,item.courseName,item.courseCode,item.batchName,item.subject].filter(Boolean).join(" ").toLowerCase();
         const sameCourse = item.courseCode === authenticatedStudent.courseId;
-        const sameBatch = !authenticatedStudent.batchName || item.batchName === authenticatedStudent.batchName;
+        const sameBatch = item.batchName === "ALL" ||
+          !authenticatedStudent.batchName ||
+          String(item.batchName).toUpperCase() === String(authenticatedStudent.batchName).toUpperCase();
         return item.status === "published" && sameCourse && sameBatch &&
           (!course || item.courseCode === course) && (!batch || item.batchName === batch) &&
           (!term || text.includes(term));
@@ -212,12 +214,23 @@
     };
 
     const loadCatalogue = async () => {
-      const response = await fetch("./data/materials.json", {cache:"no-store"});
-      if (!response.ok) throw new Error(`Catalogue request failed (${response.status})`);
+      const token = sessionStorage.getItem(SESSION_KEY);
+      if (!token) throw new Error("Student session is missing. Please sign in again.");
+
+      const response = await fetch(`${API_BASE}/api/student/materials`, {
+        method: "GET",
+        headers: { "Authorization": `Bearer ${token}` },
+        cache: "no-store"
+      });
       const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || `Drive catalogue request failed (${response.status})`);
+      }
+
       materials = Array.isArray(data.materials) ? data.materials : [];
-      const courseMatches = materials.filter(item => item.courseCode === authenticatedStudent.courseId);
       const courseName = authenticatedStudent.courseName || authenticatedStudent.courseId;
+
       if (courseFilter) {
         courseFilter.replaceChildren(option(authenticatedStudent.courseId, courseName));
         courseFilter.value = authenticatedStudent.courseId;
@@ -226,7 +239,9 @@
         batchFilter.replaceChildren(option(authenticatedStudent.batchName || "", authenticatedStudent.batchName || "All batches"));
         batchFilter.value = authenticatedStudent.batchName || "";
       }
-      if (statusLabel) statusLabel.textContent = `Catalogue updated ${data.updatedAt || "recently"}`;
+      if (statusLabel) {
+        statusLabel.textContent = `Google Drive folder synced ${data.updatedAt ? new Date(data.updatedAt).toLocaleString("en-IN") : "just now"}`;
+      }
       render();
     };
 
