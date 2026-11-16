@@ -1,7 +1,7 @@
 
 {
   "version": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-16",
   "materials": [
     {
       "materialId": "MAT-0001",
@@ -22,7 +22,7 @@
       "title": "Day-2",
       "courseCode": "NTC-ADCA",
       "courseName": "ADCA",
-      "batchName": "ADCA",
+      "batchName": "ADCA-2026",
       "subject": "",
       "fileType": "application/pdf",
       "driveFileId": "1CJqapBLCFwZyF8hEjrEL0tPl-EDIKUIB",
@@ -30,23 +30,6 @@
       "accessMode": "restricted",
       "permissionEnforcedBy": "google-drive",
       "status": "published"
-    },
-
-{
-  "materialId": "MAT-0002",
-  "title": "Day-2",
-  "courseCode": "NTC-ADCA",
-  "courseName": "ADCA",
-  "batchName": "ADCA-2026",
-  "subject": "",
-  "fileType": "application/pdf",
-  "driveFileId": "1CJqapBLCFwZyF8hEjrEL0tPl-EDIKUIB",
-  "driveUrl": "https://drive.google.com/file/d/1CJqapBLCFwZyF8hEjrEL0tPl-EDIKUIB/view",
-  "accessMode": "restricted",
-  "permissionEnforcedBy": "google-drive",
-  "status": "published"
-}
-
-    
+    }
   ]
 }
